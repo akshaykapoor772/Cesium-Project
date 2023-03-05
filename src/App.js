@@ -116,7 +116,7 @@ function App() {
         </div>
         }
         {showInput && materials.map((material, index) =>
-        <div className="material-name" key={material.id} style={{ marginBottom: '20px'}}>
+        <div className="material-name" key={index} style={{ marginBottom: '20px'}}>
         <MyComponent materialName={material.materialName} 
         isVolume={material.isVolume} 
         isColor={material.isColor}
@@ -130,7 +130,7 @@ function App() {
       <div className="total-cost-container">
       <TotalCost totalCost={totalCost.toFixed(2)}/>
       </div>
-      
+      <div className='field-container'>≈
       <InputFields 
       showInput={showInput} 
       setMaterialName={setMaterialName} 
@@ -146,6 +146,7 @@ function App() {
       eachCost={eachCost}
       isDate={isDate}
       />
+      </div>
       </div>
     </div>
   );

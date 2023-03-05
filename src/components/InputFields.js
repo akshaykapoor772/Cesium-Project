@@ -42,16 +42,18 @@ function InputFields({ showInput, setMaterialName, setVolume, setColor, setEachC
           <h4 className="input-heading">Volume (m<sup>3</sup>)</h4>
           <input type="number" className="input-field" placeholder="0" value={isVolume} onChange={handleVolumeChange}/>
         </div>
-        <div>
+        <div className="each-cost-container"> 
             <h4 className="input-heading">Cost (USD per m<sup>3</sup>)</h4>
             <input type="number" className="input-field" placeholder="0.00" value={eachCost} onChange={handleCostChange}/>
          </div>
         </div>
       }
        {showInput && 
+       <div className="input-container3">
         <div>
           <h4 className="input-heading">Delivery Date</h4>
-          <input type="date" className="input-field" plaeholder={isDate} value={isDate} onChange={handleDateChange}/>
+          <input type="date"  className="input-field" plaeholder={isDate} value={isDate} onChange={handleDateChange}/>
+        </div>
         </div>
       }
     </div>
